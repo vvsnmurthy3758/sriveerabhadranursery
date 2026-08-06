@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse 200+ nursery-grown plants at Sri Veerabhadra Nursery & Gardens – avenue trees, flowering trees, fruit plants, palms, bamboo, and more.">
+  <title>Plants | Sri Veerabhadra Nursery & Gardens</title>
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="site-brand" aria-label="Sri Veerabhadra Nursery & Gardens – Home">
+        <span class="site-brand__logo" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="M12 22V9"/>
+            <path d="M12 9C12 9 9 8 7 5"/>
+            <path d="M12 9c0 0 3-1 5-4"/>
+          </svg>
+        </span>
+        <span class="site-brand__name">Sri Veerabhadra Nursery &amp; Gardens</span>
+      </a>
+
+      <div class="site-header__controls">
+        <a href="contact.html" class="btn btn--primary site-header__cta site-header__cta--compact">Request Quote</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Toggle navigation menu">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+      </div>
+
+      <nav id="site-nav-panel" class="site-header__panel site-nav" aria-label="Main navigation">
+        <ul class="site-nav__list">
+          <li><a href="index.html" class="site-nav__link">Home</a></li>
+          <li><a href="plants.html" class="site-nav__link site-nav__link--active" aria-current="page">Plants</a></li>
+          <li><a href="blog.html" class="site-nav__link">Blog</a></li>
+          <li><a href="about.html" class="site-nav__link">About Us</a></li>
+          <li><a href="contact.html" class="site-nav__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="contact.html" class="btn btn--primary site-header__cta site-header__cta--desktop">Request Quote</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="plants-hero" aria-labelledby="plants-hero-heading">
+      <div class="container plants-hero__inner">
+        <p class="plants-hero__eyebrow">Plant Collection</p>
+        <h1 id="plants-hero-heading" class="plants-hero__title">Explore Our Plant Collection</h1>
+        <p class="plants-hero__subtitle">200+ nursery-grown varieties for farms, layouts, resorts, and landscapes across India.</p>
+      </div>
+    </section>
+
+    <section class="section plants-catalog" aria-labelledby="plants-catalog-heading">
+      <div class="container plants-catalog__layout">
+        <header class="section-header">
+          <p class="section-header__eyebrow">Browse &amp; Filter</p>
+          <h2 id="plants-catalog-heading" class="section-header__title">Find the right plants</h2>
+          <p class="section-header__desc">Search by name or filter by category to explore our featured nursery collection.</p>
+        </header>
+
+        <div class="plants-catalog__toolbar">
+          <div class="plants-catalog__controls">
+            <label class="plants-catalog__control">
+              <span class="sr-only">Search plants</span>
+              <input type="search" class="plants-catalog__input" id="plant-search" placeholder="Search plants..." autocomplete="off">
+            </label>
+          </div>
+
+          <div class="plants-catalog__tabs plants-filters" aria-label="Plant category filters">
+            <button type="button" class="plants-catalog__tab plants-filter-chip is-active" data-category-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="plants-catalog__tab plants-filter-chip" data-category-filter="Avenue Trees" aria-pressed="false">Avenue Trees</button>
+            <button type="button" class="plants-catalog__tab plants-filter-chip" data-category-filter="Flowering Trees" aria-pressed="false">Flowering Trees</button>
+            <button type="button" class="plants-catalog__tab plants-filter-chip" data-category-filter="Fruit Plants" aria-pressed="false">Fruit Plants</button>
+            <button type="button" class="plants-catalog__tab plants-filter-chip" data-category-filter="Ornamental Plants" aria-pressed="false">Ornamental Plants</button>
+            <button type="button" class="plants-catalog__tab plants-filter-chip" data-category-filter="Medicinal Plants" aria-pressed="false">Medicinal Plants</button>
+            <button type="button" class="plants-catalog__tab plants-filter-chip" data-category-filter="Palms" aria-pressed="false">Palms</button>
+            <button type="button" class="plants-catalog__tab plants-filter-chip" data-category-filter="Bamboo" aria-pressed="false">Bamboo</button>
+            <button type="button" class="plants-catalog__tab plants-filter-chip" data-category-filter="Shade Trees" aria-pressed="false">Shade Trees</button>
+          </div>
+
+          <p class="plants-result-count" id="plants-result-count" aria-live="polite">10 Plants Found</p>
+        </div>
+
+        <div class="plants-result-empty" id="plants-empty-state" hidden>
+          <div class="plants-empty-state__content">
+            <span class="plants-empty-state__icon" aria-hidden="true">🌿</span>
+            <h3 class="plants-empty-state__title">No plants found</h3>
+            <p class="plants-empty-state__text">Try a different search term or clear your category filter.</p>
+            <button type="button" id="plants-clear-filters" class="btn btn--secondary">Clear Filters</button>
+          </div>
+        </div>
+
+        <div class="plants-catalog__grid plants-grid" id="plant-grid">
+          <article class="plant-card plants-grid__card plants-catalog__card" data-plant-card data-name="Mango" data-category="Fruit Plants">
+            <div class="plant-card__image img-placeholder" role="img" aria-label="Mango"></div>
+            <div class="plant-card__body">
+              <span class="plant-card__tag">Fruit Plants</span>
+              <h3 class="plant-card__title">Mango</h3>
+              <p class="plant-card__desc">Premium fruit tree widely grown for orchards, farms, and home gardens.</p>
+              <a href="contact.html" class="btn btn--secondary btn--sm">View Details</a>
+            </div>
+          </article>
+
+          <article class="plant-card plants-grid__card plants-catalog__card" data-plant-card data-name="Millingtonia" data-category="Flowering Trees">
+            <div class="plant-card__image img-placeholder" role="img" aria-label="Millingtonia"></div>
+            <div class="plant-card__body">
+              <span class="plant-card__tag">Flowering Trees</span>
+              <h3 class="plant-card__title">Millingtonia</h3>
+              <p class="plant-card__desc">Fragrant white-flowering tree ideal for avenues and large landscapes.</p>
+              <a href="contact.html" class="btn btn--secondary btn--sm">View Details</a>
+            </div>
+          </article>
+
+          <article class="plant-card plants-grid__card plants-catalog__card" data-plant-card data-name="Sapota" data-category="Fruit Plants">
+            <div class="plant-card__image img-placeholder" role="img" aria-label="Sapota"></div>
+            <div class="plant-card__body">
+              <span class="plant-card__tag">Fruit Plants</span>
+              <h3 class="plant-card__title">Sapota</h3>
+              <p class="plant-card__desc">Reliable fruit plant suited for commercial orchards and farmhouse gardens.</p>
+              <a href="contact.html" class="btn btn--secondary btn--sm">View Details</a>
+            </div>
+          </article>
+
+          <article class="plant-card plants-grid__card plants-catalog__card" data-plant-card data-name="Tabebuia Rosea" data-category="Flowering Trees">
+            <div class="plant-card__image img-placeholder" role="img" aria-label="Tabebuia Rosea"></div>
+            <div class="plant-card__body">
+              <span class="plant-card__tag">Flowering Trees</span>
+              <h3 class="plant-card__title">Tabebuia Rosea</h3>
+              <p class="plant-card__desc">Popular pink-flowering tree for layouts, roads, and ornamental planting.</p>
+              <a href="contact.html" class="btn btn--secondary btn--sm">View Details</a>
+            </div>
+          </article>
+
+          <article class="plant-card plants-grid__card plants-catalog__card" data-plant-card data-name="Lagerstroemia" data-category="Flowering Trees">
+            <div class="plant-card__image img-placeholder" role="img" aria-label="Lagerstroemia"></div>
+            <div class="plant-card__body">
+              <span class="plant-card__tag">Flowering Trees</span>
+              <h3 class="plant-card__title">Lagerstroemia</h3>
+              <p class="plant-card__desc">Long-blooming ornamental tree available in vibrant seasonal colours.</p>
+              <a href="contact.html" class="btn btn--secondary btn--sm">View Details</a>
+            </div>
+          </article>
+
+          <article class="plant-card plants-grid__card plants-catalog__card" data-plant-card data-name="Mimusops elengi" data-category="Avenue Trees">
+            <div class="plant-card__image img-placeholder" role="img" aria-label="Mimusops elengi"></div>
+            <div class="plant-card__body">
+              <span class="plant-card__tag">Avenue Trees</span>
+              <h3 class="plant-card__title">Mimusops elengi</h3>
+              <p class="plant-card__desc">Evergreen avenue tree valued for shade, fragrance, and dense canopy.</p>
+              <a href="contact.html" class="btn btn--secondary btn--sm">View Details</a>
+            </div>
+          </article>
+
+          <article class="plant-card plants-grid__card plants-catalog__card" data-plant-card data-name="Terminalia mantaly" data-category="Avenue Trees">
+            <div class="plant-card__image img-placeholder" role="img" aria-label="Terminalia mantaly"></div>
+            <div class="plant-card__body">
+              <span class="plant-card__tag">Avenue Trees</span>
+              <h3 class="plant-card__title">Terminalia mantaly</h3>
+              <p class="plant-card__desc">Layered canopy tree perfect for formal avenues and resort landscapes.</p>
+              <a href="contact.html" class="btn btn--secondary btn--sm">View Details</a>
+            </div>
+          </article>
+
+          <article class="plant-card plants-grid__card plants-catalog__card" data-plant-card data-name="Cordia sebestena" data-category="Flowering Trees">
+            <div class="plant-card__image img-placeholder" role="img" aria-label="Cordia sebestena"></div>
+            <div class="plant-card__body">
+              <span class="plant-card__tag">Flowering Trees</span>
+              <h3 class="plant-card__title">Cordia sebestena</h3>
+              <p class="plant-card__desc">Bright orange-flowering tree for gardens, campuses, and streetscapes.</p>
+              <a href="contact.html" class="btn btn--secondary btn--sm">View Details</a>
+            </div>
+          </article>
+
+          <article class="plant-card plants-grid__card plants-catalog__card" data-plant-card data-name="Cypress" data-category="Shade Trees">
+            <div class="plant-card__image img-placeholder" role="img" aria-label="Cypress"></div>
+            <div class="plant-card__body">
+              <span class="plant-card__tag">Shade Trees</span>
+              <h3 class="plant-card__title">Cypress</h3>
+              <p class="plant-card__desc">Tall evergreen tree providing structure, screening, and wind protection.</p>
+              <a href="contact.html" class="btn btn--secondary btn--sm">View Details</a>
+            </div>
+          </article>
+
+          <article class="plant-card plants-grid__card plants-catalog__card" data-plant-card data-name="Cycas" data-category="Ornamental Plants">
+            <div class="plant-card__image img-placeholder" role="img" aria-label="Cycas"></div>
+            <div class="plant-card__body">
+              <span class="plant-card__tag">Ornamental Plants</span>
+              <h3 class="plant-card__title">Cycas</h3>
+              <p class="plant-card__desc">Architectural ornamental plant for entrances, gardens, and focal points.</p>
+              <a href="contact.html" class="btn btn--secondary btn--sm">View Details</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section plants-cta" aria-labelledby="plants-cta-heading">
+      <div class="container plants-cta__inner">
+        <p class="plants-cta__eyebrow">Need help selecting plants?</p>
+        <h2 id="plants-cta-heading" class="plants-cta__title">Need help selecting plants?</h2>
+        <div class="plants-cta__actions">
+          <a href="contact.html" class="btn btn--primary btn--lg">Request Quote</a>
+          <a href="https://wa.me/918367226375" class="btn btn--whatsapp btn--lg" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__main">
+      <div class="container site-footer__grid">
+        <section class="site-footer__section" aria-labelledby="footer-about-heading">
+          <h2 id="footer-about-heading" class="site-footer__heading">About Sri Veerabhadra Nursery &amp; Gardens</h2>
+          <p class="site-footer__about">
+            A family-run nursery established in 2005, spanning 15 acres in Kadiam, Andhra Pradesh.
+            We grow 200+ healthy plant varieties and supply farms, layouts, resorts, and landscapes across India.
+            Every healthy plant contributes to a greener future.
+          </p>
+        </section>
+
+        <section class="site-footer__section" aria-labelledby="footer-links-heading">
+          <h2 id="footer-links-heading" class="site-footer__heading">Quick Links</h2>
+          <ul class="site-footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="plants.html">Plants</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </section>
+
+        <section class="site-footer__section" aria-labelledby="footer-categories-heading">
+          <h2 id="footer-categories-heading" class="site-footer__heading">Plant Categories</h2>
+          <ul class="site-footer__links">
+            <li><a href="plants.html">Avenue Trees</a></li>
+            <li><a href="plants.html">Flowering Trees</a></li>
+            <li><a href="plants.html">Fruit Plants</a></li>
+            <li><a href="plants.html">Ornamental Plants</a></li>
+          </ul>
+        </section>
+
+        <section class="site-footer__section" aria-labelledby="footer-contact-heading">
+          <h2 id="footer-contact-heading" class="site-footer__heading">Contact Information</h2>
+          <ul class="site-footer__contact-list">
+            <li class="site-footer__contact-item">
+              <span class="site-footer__contact-label">Phone</span>
+              <a href="tel:+918367226375">8367226375</a>
+            </li>
+            <li class="site-footer__contact-item">
+              <span class="site-footer__contact-label">Email</span>
+              <a href="mailto:sriveerabhadranursery@gmail.com">sriveerabhadranursery@gmail.com</a>
+            </li>
+            <li class="site-footer__contact-item">
+              <span class="site-footer__contact-label">Address</span>
+              <address>
+                Burrilanka,<br>
+                Kadiam,<br>
+                East Godavari,<br>
+                Andhra Pradesh,<br>
+                533126
+              </address>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <div class="container">
+        <p class="site-footer__copyright">&copy; <span id="footer-year"></span> Sri Veerabhadra Nursery &amp; Gardens. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

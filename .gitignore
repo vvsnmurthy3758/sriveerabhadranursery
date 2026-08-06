@@ -1,0 +1,5 @@
+﻿everything-claude-code/
+.server_pid
+node_modules/
+.DS_Store
+Thumbs.db

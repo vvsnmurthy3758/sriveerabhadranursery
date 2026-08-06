@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#40916c"/>
+      <stop offset="100%" style="stop-color:#1b4332"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d6a4f"/>
+      <stop offset="100%" style="stop-color:#14291f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <ellipse cx="960" cy="900" rx="1200" ry="300" fill="url(#ground)" opacity="0.6"/>
+  <ellipse cx="400" cy="750" rx="200" ry="280" fill="#1b4332" opacity="0.5"/>
+  <ellipse cx="1500" cy="720" rx="250" ry="320" fill="#1b4332" opacity="0.45"/>
+  <ellipse cx="960" cy="680" rx="180" ry="260" fill="#2d6a4f" opacity="0.55"/>
+  <text x="960" y="540" text-anchor="middle" fill="rgba(255,255,255,0.25)" font-family="system-ui,sans-serif" font-size="28" font-weight="600">Hero Image Placeholder</text>
+</svg>
