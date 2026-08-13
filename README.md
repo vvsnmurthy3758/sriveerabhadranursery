@@ -7,7 +7,7 @@
 [![Website](https://img.shields.io/badge/🌐_Website-Live-2ecc71?style=for-the-badge)](https://sriveerabhadranursery.com)
 [![Plants](https://img.shields.io/badge/🌱_Plants-500+-27ae60?style=for-the-badge)](#-plant-collection)
 [![Nursery Area](https://img.shields.io/badge/🏡_Nursery-15_Acres-16a085?style=for-the-badge)](#-about-us)
-[![Since](https://img.shields.io/badge/📅_Since-2005-2c3e50?style=for-the-badge)](#-about-us)
+[![Since](https://img.shields.io/badge/📅_Since-1995-2c3e50?style=for-the-badge)](#-about-us)
 [![Location](https://img.shields.io/badge/📍_Kadiam-Andhra_Pradesh-e74c3c?style=for-the-badge)](#-contact)
 
 <br/>
@@ -24,7 +24,7 @@
 
 ## 📖 About Us
 
-**Sri Veerabhadra Nursery & Gardens** is a family-owned nursery located in **Burrilanka, Kadiam** — the heart of India's famous nursery belt in **East Godavari, Andhra Pradesh**. With roots in agriculture spanning generations, the family converted their fruit garden into a professional nursery in **2005**.
+**Sri Veerabhadra Nursery & Gardens** is a family-owned nursery located in **Burrilanka, Kadiam** — the heart of India's famous nursery belt in **East Godavari, Andhra Pradesh**. With roots in agriculture spanning generations, the family converted their fruit garden into a professional nursery in **1995**.
 
 Today, we cultivate **500+ plant varieties** across **15 acres**, serving clients throughout India — from individual home gardeners to large-scale landscape developers, farmhouse owners, resorts, and government projects.
 
@@ -296,7 +296,7 @@ node update-data.js audit
 
 **Kadiam, East Godavari, Andhra Pradesh, India**
 
-*Growing green since 2005* 🌱
+*Growing green since 1995* 🌱
 
 ---
 
