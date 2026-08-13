@@ -61,7 +61,7 @@ graph TB
         H1["🔝 HEADER<br/>Logo + Nav + Request Quote CTA"]
         H2["🎬 HERO SECTION<br/>'From Nursery to Nature'<br/>Explore Plants · Request Quote"]
         H3["📂 PLANT CATEGORIES<br/>8 Category Cards Grid<br/>Avenue · Fruit · Flowering · Shrubs<br/>Climbers · Medicinal · Aquatic · Palms"]
-        H4["⭐ WHY CHOOSE US<br/>6 Stats/Features Grid<br/>20+ Yrs · 15 Acres · 200+ Varieties<br/>100K+ Supplied · Pan India · Healthy"]
+        H4["⭐ WHY CHOOSE US<br/>6 Stats/Features Grid<br/>30+ Yrs · 15 Acres · 500+ Varieties<br/>100K+ Supplied · Pan India · Healthy"]
         H5["🌿 PLANT COLLECTION<br/>10 Featured Plant Cards<br/>Mango · Millingtonia · Sapota · etc."]
         H6["📝 GROWING INSIGHTS<br/>3 Blog Preview Cards<br/>Avenue Trees · Flowering Trees · Mango Guide"]
         H7["📞 CONTACT CTA<br/>'Looking for Quality Plants?'<br/>Call Now · WhatsApp Us"]
@@ -220,7 +220,7 @@ mindmap
             sitemap.xml
             robots.txt
         Data
-            plants.json — 200+ plants
+            plants.json — 500+ plants
             blogs.json — Articles
             Fetch API — Dynamic loading
             URL params — Detail pages

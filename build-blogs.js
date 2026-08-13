@@ -761,7 +761,125 @@ console.log(
   "Blog pages generated successfully."
 );
 
+/* -------------------------------------------------------
+   UPDATE HOMEPAGE GROWING INSIGHTS
+------------------------------------------------------- */
 
+const INDEX_HTML_FILE = path.join(__dirname, "index.html");
+
+if (!fs.existsSync(INDEX_HTML_FILE)) {
+  console.error("ERROR: index.html not found.");
+  process.exit(1);
+}
+
+let indexPage = fs.readFileSync(
+  INDEX_HTML_FILE,
+  "utf8"
+);
+
+
+/*
+   Show only the 3 newest blogs on the homepage.
+*/
+
+const homepageBlogs = blogs.slice(0, 3);
+
+
+const homepageCards = homepageBlogs.map(blog => {
+
+  const title = escapeHtml(blog.title || "");
+  const slug = escapeHtml(blog.slug || "");
+  const date = escapeHtml(blog.date || "");
+  const excerpt = escapeHtml(blog.excerpt || "");
+  const image = escapeHtml(blog.featuredImage || "");
+  const imageAlt = escapeHtml(
+    blog.imageAlt || blog.title || ""
+  );
+  const tag = escapeHtml(
+    blog.tag || "Nursery Insights"
+  );
+
+  const imageStyle = image
+    ? `style="background-image:url('${image}');background-size:cover;background-position:center;"`
+    : "";
+
+  return `
+      <article
+        class="blog-card"
+        onclick="window.location.href='generated-blogs/${slug}.html'"
+        style="cursor:pointer;"
+      >
+
+        <div
+          class="blog-card__image img-placeholder"
+          role="img"
+          aria-label="${imageAlt}"
+          ${imageStyle}
+        ></div>
+
+        <div class="blog-card__body">
+
+          <time
+            class="blog-card__date"
+            datetime="${date}"
+          >
+            ${formatDate(date)}
+          </time>
+
+          <span class="blog-card__tag">
+            ${tag}
+          </span>
+
+          <h3 class="blog-card__title">
+            ${title}
+          </h3>
+
+          <p class="blog-card__excerpt">
+            ${excerpt}
+          </p>
+
+          <a
+            href="generated-blogs/${slug}.html"
+            class="blog-card__link"
+            onclick="event.stopPropagation();"
+          >
+            Read More
+          </a>
+
+        </div>
+
+      </article>`;
+}).join("\n");
+
+
+const homepagePattern = /<!-- BLOG_CARDS_START -->[\s\S]*?<!-- BLOG_CARDS_END -->/;
+
+if (!homepagePattern.test(indexPage)) {
+
+  console.error(
+    "ERROR: Homepage blog markers not found in index.html."
+  );
+
+  process.exit(1);
+}
+
+
+indexPage = indexPage.replace(
+  homepagePattern,
+  `<!-- BLOG_CARDS_START -->\n${homepageCards}\n      <!-- BLOG_CARDS_END -->`
+);
+
+
+fs.writeFileSync(
+  INDEX_HTML_FILE,
+  indexPage,
+  "utf8"
+);
+
+
+console.log(
+  "Updated: index.html Growing Insights"
+);
 /* -------------------------------------------------------
    FINISHED
 ------------------------------------------------------- */

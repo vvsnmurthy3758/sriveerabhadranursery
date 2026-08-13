@@ -70,7 +70,7 @@ Nursery Area:
 
 Plant Varieties:
 
-200+
+500+
 
 
 
