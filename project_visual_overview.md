@@ -23,9 +23,13 @@ graph TD
     end
 
     NAV --> HOME
+
     NAV --> PLANTS
+
     NAV --> BLOG
+
     NAV --> ABOUT
+    
     NAV --> CONTACT
 
     PLANTS -->|"?slug=mango"| PLANT_D
